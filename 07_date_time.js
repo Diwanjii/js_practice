@@ -23,8 +23,14 @@ let myTimeStamp = Date.now()
 // console.log(Math.floor(myDate/1000));
 
 
+const date = myDate.toLocaleString('default', {
+    weekday: "long",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+})
 
-
+console.log(date);
 
 
 
