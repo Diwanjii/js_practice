@@ -63,9 +63,9 @@ console.log(myNewNum); // 5.568e+0
 // ------------------ isInteger() -------------------
 // The Number.isInteger() method returns true if a value is an integer of the datatype Number.
 // Otherwise it returns false.
-console.log(Number.isInteger(123)); // TRUE
-console.log(Number.isInteger(-123)); // TRUE
-console.log(Number.isInteger('123')); // FALSE
+console.log(Number.isInteger(123)); // True
+console.log(Number.isInteger(-123)); // True
+console.log(Number.isInteger('123')); // False
 
 
 
