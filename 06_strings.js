@@ -65,13 +65,75 @@ console.log(title.startsWith('jack')); // FALSE
 // startsWith() method with the second parameter that determines the beginning position to start searching:
 console.log(title.startsWith('Jill', 9)); //TRUE
 
+// --------------------- endsWith() ----------------------
+// The endsWith() returns true if a string ends with the characters of a specified string or false otherwise.
+console.log(title.endsWith('hill')); // FALSE
 
+// endsWith() method matches characters case-sensitively
+console.log(title.endsWith('Hill')); // TRUE
 
+// --------------------- trim() -----------------------
+// The String.prototype.trim() returns a new string stripped of whitespace characters from beginning and end of a string
+let str1 = '  JS trim  ';
+let result1 = str1.trim();
 
+console.log(result1); // 'JS Trim'
 
+// ----- trimStart() ------
+// To remove the whitespace characters from the beginning of a string, you use the trimStart() method
+const result2 = str1.trimStart()
+console.log({ str1 });
+console.log({ result2 }); // 'JS Trim  '
 
+// ------ trimEnd() ------
+// To remove the whitespace characters from the end of a string.
+const result3 = str1.trimEnd();
+console.log({ str1 });
+console.log({ result3 });
 
+// --------------------- includes() -----------------------
+// The includes() method determines whether a string contains another string
+let email = 'admin@example.com';
+console.log(email.includes('@')); // TRUE
 
+// the includes() matches the string case-sensitively
+let str2 = 'JavaScript String';
+console.log(str2.includes('script')); //FALSE
+console.log(str2.includes('Script')); //TRUE
+
+// The optional position parameter specifies the position within the string at which to begin searching for the searchString. 
+// The position defaults to 0.
+console.log(str2.includes('Script', 5)); //FALSE
+
+// ----------------------- split() --------------------------
+// The String.prototype.split() divides a string into an array of substrings.
+
+// split([separator, [,limit]]);
+// 1) separator
+// The separator determines where each split should occur in the original string. The separator can be a string.
+//  Or it can be a regular expression.
+// If you omit the separator or the split() cannot find the separator in the string, the split() returns the entire string.
+
+// 2) limit
+// The limit is zero or positive integer that specifies the number of substrings. 
+// The split() method will stop when the number of substrings equals to the limit.
+// If the limit is zero, the split() returns an empty array. If the limit is 1, 
+// the split() returns an array that contains the string.
+let substrings = str2.split(' ');
+console.log(substrings); // ['JavaScript' , 'String']
+
+// split() method to divide a string into substrings using the space separator. 
+// It also uses the second parameter to limit the number of substrings to two:
+let substrings1 = str2.split(' ', 1);
+console.log(substrings1); // ['JavaScript']
+
+// split() method to split sentences in a paragraph into sentences
+let paragraph = 'Good Morning! How are you? This is John. John is my friend.';
+let sentences = paragraph.split(/[!,?,.]/);
+console.log(sentences); //["Good Morning", " How are you", " This is John", " John is my friend", ""]
+
+let sentences1 = paragraph.split(/([!,?,.])/);
+console.log(sentences1); //["Good Morning", "!", " How are you", "?", " This is John", ".", " John is my friend", ".", ""]
 
 
 
