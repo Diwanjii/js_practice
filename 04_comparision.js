@@ -24,3 +24,5 @@ userTwo.upi = "user@ibl"; // it will change main variable
 
 console.log(userOne);
 console.log(userTwo);
+
+// https://www.javascripttutorial.net/javascript-primitive-vs-reference-values/
