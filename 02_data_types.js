@@ -1,11 +1,11 @@
 // Data Types in JavaScript
 // In JavaScript we do not need to specify type of the variable because it is dynamically used by JavaScript engine.
 
-// Primitive Data Types                    Non-Primitive Data type
+// Primitive Data Types                    Non-Primitive (Refrence) Data type
 // String                                   Object
 // Number                                   Array
 // Boolean                                  RegExp
-// Undefined
+// Undefined                                Function
 // Null
 
 // alert("hello") //Alert is Not define in nodejs it will work only in Browser console
@@ -21,8 +21,10 @@ console.log(typeof (counter)); // "string"
 
 // Undefined
 
-/* The undefined type is a primitive type that has only one value undefined.
-   By default, when a variable is declared but not initialized, it is assigned the value of undefined. */
+/* 
+The undefined type is a primitive type that has only one value undefined.
+By default, when a variable is declared but not initialized, it is assigned the value of undefined. 
+*/
 // let counter;
 // console.log(counter);        // undefined
 // console.log(typeof counter); // undefined
@@ -50,8 +52,10 @@ console.log(Number.MAX_VALUE + Number.MAX_VALUE); // Infinity
 console.log(-Number.MAX_VALUE - Number.MAX_VALUE); // -Infinity
 
 // NaN
-/* NaN stands for Not a Number. It is a special numeric value that indicates an invalid number. 
-For example, the division of a string by a number returns NaN:. */
+/* 
+NaN stands for Not a Number. It is a special numeric value that indicates an invalid number. 
+For example, the division of a string by a number returns NaN:. 
+*/
 console.log('a' / 2); // NaN;
 
 /* 
@@ -114,7 +118,7 @@ console.log(Boolean(20));  // true
 console.log(Boolean(Infinity));  // true
 console.log(Boolean(0));  // false
 
-console.log(Boolean({foo: 100}));  // true on non-empty object
+console.log(Boolean({ foo: 100 }));  // true on non-empty object
 console.log(Boolean(null));// false
 
 // The symbol type
@@ -124,7 +128,6 @@ console.log(Boolean(null));// false
 // To create a symbol, you call the Symbol function as follows:
 
 let s1 = Symbol();
-// Code language: JavaScript (javascript)
 // The Symbol function creates a new unique value every time you call it.
 
 console.log(Symbol() == Symbol()); // false
