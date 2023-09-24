@@ -58,7 +58,9 @@ console.log(seass); // ['Caribbean Sea', 'North Sea', 'Baltic Sea']
 // By default the search starts at the first element and ends at the last.
 // Negative start values counts from the last element (but still searches from left to right).
 let index = seass.indexOf('North Sea');
+const newIndex = myArr.indexOf(2)
 console.log(index); // 1
+console.log(newIndex); // 2
 
 // ---------------- length -----------------
 // The length property sets or returns the number of elements in an array.
