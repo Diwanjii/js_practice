@@ -67,9 +67,73 @@ console.log(Number.isInteger(123)); // True
 console.log(Number.isInteger(-123)); // True
 console.log(Number.isInteger('123')); // False
 
+// ==================================================== Maths ===========================================================
+// The Math object allows you to perform mathematical tasks.
+// Math is not a constructor. All properties/methods of Math can be called by using Math as an object, without creating it:
+let x = Math.PI;
+let y = Math.sqrt(16);
+console.log(x, y); // (3.141592653589793, 4)
 
+// ------------------------------ Math.abs() ---------------------------------
+// The Math.abs() method returns the absolute value of a number.
+console.log(Math.abs(-7.25)); // 7.25
+console.log(Math.abs(7.25)); // 7.25
+console.log(Math.abs(null)); // 0
+console.log(Math.abs(2 - 3)); // 1
+console.log(Math.abs("anish")); // Nan
 
+// ---------------------------- Math.ceil() ----------------------------------
+// The Math.ceil() method rounds a number rounded UP to the nearest integer.
+console.log(Math.ceil(1.4)); // returns 2
+console.log(Math.ceil(0.60)); // returns 1
+console.log(Math.ceil(0.40)); // returns 1
+console.log(Math.ceil(5.1)); // returns 6
+console.log(Math.ceil(-5.1)); // returns -5
+console.log(Math.ceil(-5.9)); // returns -5
 
+// --------------------------- Math.floor() ----------------------------
+// The Math.floor() method rounds a number DOWN to the nearest integer.
+console.log(Math.floor(1.6)); // 1
+console.log(Math.floor(5.1)); // 5
+console.log(Math.floor(-5.6)); // -6
+
+// -------------------------- Math.pow() ----------------------------
+// The Math.pow() method returns the value of x to the power of y (x^y).
+console.log(Math.pow(4, 3));
+
+// ------------------------- Math.random() ----------------------------
+// The Math.random() method returns a random number from 0 (inclusive) up to but not including 1 (exclusive).
+console.log(Math.random()); // returns random number
+
+// Return a random number between 0 and 10:
+console.log(Math.random() * 10);
+
+// Return a random number between 0 and 100:
+console.log(Math.random() * 100);
+
+// A random whole number between 1 and 10:
+console.log((Math.random() * 10) + 1);
+
+// A random whole number between 1 and 100:
+console.log(Math.floor((Math.random() * 100) + 1));
+
+// --------------------- Math.round() --------------------
+// The Math.round() method rounds a number to the nearest integer.
+// 2.49 will be rounded down (2), and 2.5 will be rounded up (3).
+console.log(Math.round(2.5)); // 3
+console.log(Math.round(-2.50)); // -2
+console.log(Math.round(-2.69)); // -3
+
+// A random whole number between 1 and 100:
+console.log(Math.round((Math.random() * 100) + 1));
+
+// A random whole number between 100 and 1000:
+console.log(Math.round((Math.random() * 1000) + 1));
+
+// ---------------------- Math.PI ----------------------------
+// Math.PI returns PI (the ratio of a circle's area to the square of its radius, approximately 3.14)
+console.log(Math.PI.toFixed(2)); // 3.14
+console.log(Math.PI.toFixed(3)); // 3.142
 
 
 
