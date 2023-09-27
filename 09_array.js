@@ -179,7 +179,19 @@ console.log(newArr); // [0,1,2,3,4,5,6]
 console.log(Array.from("ABCDEFG")); // ["A", "B", "C", "D", "E", "F", "G"]
 console.log(Array.from({ name: "Anish" })); // []
 
+// ------------ Array.of() --------------
+// The Array.of() method is similar to the Array constructor except the Array.of() method 
+// does not treat a single numeric value special.
 
+// In other words, the Array.of() method always creates an array that contains the values 
+// that you pass to it regardless of the types or the number of arguments.
+
+// The following shows the syntax of the Array.of() method:
+// Array.of(element0[, element1[, ...[, elementN]]])
+const num1 = 100;
+const num2 = 200;
+const num3 = 300;
+console.log(Array.of(num1, num2, num3)); // [100, 200, 300]
 
 
 
