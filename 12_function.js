@@ -13,7 +13,11 @@ function sayMyName() {
     console.log("Hello");
     console.log("Anish Diwan");
 }
+// In the assignment statement, we don’t include the opening and closing parentheses at the end of the add identifier. 
+// We also don’t execute the function but reference the function.
 // sayMyName // It is Refrence
+
+// By doing this, we can have two ways to execute the same function. For example, we can call it normally as follows
 // sayMyName()
 
 function addTwoNumbers(number1, number2) {
@@ -28,12 +32,22 @@ addTwoNumbers(3, null) // 3
 const result = addTwoNumbers(3, 5);
 console.log(result); // undefined
 
+// To specify a return value for a function, you use the return statement followed by an expression or a value, like this:
 function addTwoNumber(number1, number2) {
     return number1 + number2;
 }
 
 const results = addTwoNumber(3, 5);
 console.log("Results : ", results); // Results : 8
+
+// The following declares the average() function that takes three arguments. The third argument is a function:
+function average(a, b, fn) {
+    return fn(a, b) / 2;
+}
+
+// Now, you can pass the sum function to the average() function as follows:
+let result2 = average(10, 20, addTwoNumbers);
+console.log(result2);
 
 // function loginUserMessage(username) {
 //     if (username === undefined) {
