@@ -6,8 +6,24 @@ var x = function (x, y) {
     return x * y;
 }
 
-// ES6
-// const x = (x, y) => x * y;
+
+// ES6 ---> explicite return
+// const addTwo = (num1, num2) => {
+//     return num1 + num2;
+// }
+
+// ES6 ---> implicite return
+// const multiTwo = (x, y) => x * y; 
+// const addTwo = (x, y) => x + y;
+const addTwo = (x, y) => (x + y);
+console.log(addTwo(3, 4)); // 7
+
+// For example, the following code causes an error.
+// let setColor = color => {value: color };
+// Since both block and object literal use curly brackets, the JavasScript engine cannot distinguish between a block and an object.
+// To fix this, you need to wrap the object literal in parentheses as follows:
+let setColor = color => ({ value: color });
+console.log(setColor("blue")); // { value: 'blue' }
 
 // Arrow functions do not have their own this.They are not well suited for defining object methods.
 // Arrow functions are not hoisted.They must be defined before they are used.
@@ -92,5 +108,4 @@ const chai = () => {
     let username = "Anish";
     console.log(this.username); // undefined
 }
-
 chai()
